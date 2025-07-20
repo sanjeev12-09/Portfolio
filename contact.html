@@ -4,24 +4,85 @@
   <meta charset="UTF-8" />
   <title>Contact | Sanjeev Ranjan</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    }
+
+    .virus-icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.08;
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <nav class="bg-blue-600 text-white p-4 flex justify-between">
-    <div class="font-bold">Sanjeev Ranjan</div>
-    <div class="space-x-4">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+<body class="text-white font-sans">
+
+  <!-- Background virus icons -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[10%]" style="animation-delay: 2s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[40%]" style="animation-delay: 5s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[70%]" style="animation-delay: 8s;" />
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-600 bg-opacity-80 backdrop-blur-md px-6 py-4 flex justify-between items-center z-10 relative shadow-lg">
+    <div class="text-xl font-bold tracking-wide">Sanjeev Ranjan</div>
+    <div class="space-x-4 text-sm md:text-base">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="skills.html" class="hover:underline">Skills</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="experience.html" class="hover:underline">Experience</a>
+      <a href="contact.html" class="underline font-semibold">Contact</a>
     </div>
   </nav>
 
-  <main class="max-w-xl mx-auto mt-10 px-4">
-    <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
-    <p class="text-lg">📧 Email: sanjeev.ranjan@example.com</p>
-    <p class="text-lg mt-2">💼 LinkedIn: <a href="https://www.linkedin.com/in/sanjeev-ranjan-b5033a1b8/" class="text-blue-600 hover:underline">sanjeev-ranjan</a></p>
-    <p class="text-lg mt-2">📍 Location: Bangalore, India</p>
+  <!-- Contact Form Section -->
+  <main class="px-6 py-12 z-10 relative max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold glow text-center mb-10">Let's Connect</h1>
+
+    <form class="bg-gray-900 bg-opacity-60 rounded-lg p-8 border border-blue-500 shadow-lg space-y-6">
+      <div>
+        <label class="block text-gray-300 mb-2" for="name">Your Name</label>
+        <input class="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="name" name="name" placeholder="Enter your name" />
+      </div>
+
+      <div>
+        <label class="block text-gray-300 mb-2" for="email">Email Address</label>
+        <input class="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" name="email" placeholder="you@example.com" />
+      </div>
+
+      <div>
+        <label class="block text-gray-300 mb-2" for="message">Message</label>
+        <textarea class="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" name="message" rows="5" placeholder="How can I help you?"></textarea>
+      </div>
+
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded text-white font-semibold transition duration-300">
+        Send Message
+      </button>
+    </form>
   </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm mb-6 z-10 relative">
+    © 2025 Sanjeev Ranjan. All rights reserved.
+  </footer>
 </body>
 </html>
