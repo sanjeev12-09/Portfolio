@@ -7,58 +7,66 @@
   <style>
     body {
       background-color: #000;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
-    .bg-icon {
+    .glow {
+      text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    }
+
+    .virus-icon {
       position: absolute;
-      width: 60px;
-      height: 60px;
-      opacity: 0.04;
-      animation: float 15s infinite ease-in-out;
+      width: 40px;
+      height: 40px;
+      opacity: 0.08;
+      animation: float 18s linear infinite;
     }
 
     @keyframes float {
-      0%   { transform: translateY(0); opacity: 0.05; }
-      50%  { transform: translateY(-30px); opacity: 0.1; }
-      100% { transform: translateY(0); opacity: 0.05; }
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
     }
   </style>
 </head>
-<body class="text-white relative min-h-screen">
+<body class="text-white font-sans">
 
-  <!-- Floating Background Icons -->
-  <svg class="bg-icon top-10 left-10" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M17.66 6.34l-1.41 1.41M6.34 17.66l-1.41 1.41M17.66 17.66l-1.41-1.41M6.34 6.34L4.93 7.75" />
-  </svg>
-  <svg class="bg-icon top-1/3 left-1/2" viewBox="0 0 24 24" fill="white">
-    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
-  </svg>
-  <svg class="bg-icon bottom-20 right-10" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M17 7l-1 1M7 17l-1 1M17 17l-1-1M7 7l-1-1" />
-  </svg>
+  <!-- Background Virus-Like Icons -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <!-- Use SVG or Emoji for virus-like icons -->
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[5%]" style="animation-delay: 0s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[25%]" style="animation-delay: 3s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[45%]" style="animation-delay: 6s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[65%]" style="animation-delay: 9s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[85%]" style="animation-delay: 12s;" />
+  </div>
 
   <!-- Navbar -->
-  <nav class="bg-blue-600 bg-opacity-80 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center z-10 relative shadow-md">
+  <nav class="bg-blue-600 bg-opacity-80 backdrop-blur-md px-6 py-4 flex justify-between items-center z-10 relative shadow-lg">
     <div class="text-xl font-bold tracking-wide">Sanjeev Ranjan</div>
     <div class="space-x-4 text-sm md:text-base">
-      <a href="index.html" class="hover:underline">Home</a>
+      <a href="index.html" class="underline font-semibold">Home</a>
       <a href="about.html" class="hover:underline">About</a>
       <a href="skills.html" class="hover:underline">Skills</a>
       <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="experience.html" class="hover:underline">Experience</a>
       <a href="contact.html" class="hover:underline">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <main class="flex flex-col items-center justify-center text-center mt-24 px-6 z-10 relative">
-    <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-md mb-4 animate-pulse">
-      Welcome to My Portfolio
-    </h1>
-    <p class="text-lg md:text-xl text-gray-300 max-w-2xl">
-      I am <span class="text-blue-400 font-semibold">Sanjeev Ranjan</span>, a Product Application Engineer with a passion for solving real-world problems through innovative software and data-driven thinking.
-    </p>
+  <!-- Main Content -->
+  <main class="flex flex-col items-center justify-center min-h-[80vh] text-center px-4 z-10 relative">
+    <h1 class="text-5xl md:text-6xl font-extrabold glow mb-6">Welcome to My Portfolio</h1>
+    <p class="text-lg text-gray-300 max-w-2xl">I am <span class="text-blue-400 font-semibold">Sanjeev Ranjan</span>, a Product Application Engineer passionate about creating scalable solutions, solving real-world business problems, and delivering high-impact digital experiences.</p>
   </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm mb-6 z-10 relative">
+    © 2025 Sanjeev Ranjan. All rights reserved.
+  </footer>
 
 </body>
 </html>
