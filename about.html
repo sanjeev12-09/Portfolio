@@ -4,22 +4,70 @@
   <meta charset="UTF-8" />
   <title>About | Sanjeev Ranjan</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    }
+
+    .virus-icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.08;
+      animation: float 18s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <nav class="bg-blue-600 text-white p-4 flex justify-between">
-    <div class="font-bold">Sanjeev Ranjan</div>
-    <div class="space-x-4">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+<body class="text-white font-sans">
+
+  <!-- Background Icons -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[10%]" style="animation-delay: 1s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[30%]" style="animation-delay: 4s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[50%]" style="animation-delay: 7s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[70%]" style="animation-delay: 10s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[90%]" style="animation-delay: 13s;" />
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-blue-600 bg-opacity-80 backdrop-blur-md px-6 py-4 flex justify-between items-center z-10 relative shadow-lg">
+    <div class="text-xl font-bold tracking-wide">Sanjeev Ranjan</div>
+    <div class="space-x-4 text-sm md:text-base">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="underline font-semibold">About</a>
+      <a href="skills.html" class="hover:underline">Skills</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="experience.html" class="hover:underline">Experience</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
     </div>
   </nav>
 
-  <main class="max-w-3xl mx-auto mt-10 px-4">
-    <h1 class="text-3xl font-bold mb-4">About Me</h1>
-    <p class="text-lg">I am a results-driven and detail-oriented technology professional with a passion for solving complex problems and delivering impactful digital solutions. With hands-on experience in data engineering, supply chain systems, and full-stack development, I bring a unique blend of analytical thinking and practical execution to every project I undertake. My work is grounded in a deep understanding of both business and technology, allowing me to translate real-world needs into scalable and efficient solutions. I thrive in collaborative environments where innovation, learning, and user-centric design are at the core. When I'm not coding or optimizing workflows, I enjoy exploring emerging tech trends, mentoring peers, and contributing to open-source communities. I believe in continuous growth, and I am always seeking opportunities to challenge myself, learn new skills, and make a positive impact through my work.</p>
+  <!-- Content -->
+  <main class="flex flex-col items-center justify-center min-h-[80vh] text-center px-6 z-10 relative">
+    <h1 class="text-4xl md:text-5xl font-bold glow mb-8">About Me</h1>
+    <p class="text-lg text-gray-300 max-w-4xl leading-relaxed">
+      Hello! I'm <strong class="text-blue-400">Sanjeev Ranjan</strong>, a Product Application Engineer at o9 Solutions with a passion for building impactful and scalable applications. My core strength lies in combining technical depth with a solid understanding of business objectives to design and deliver optimal solutions. I bring expertise in PySpark, SQL, and data pipelines, and have contributed to features across forecasting, inventory optimization, and plugin performance. I've also collaborated with cross-functional stakeholders to gather requirements, lead configurations, and validate outputs across projects in retail, CPG, and pharma industries. I’m a strong believer in continuous learning and take pride in bridging gaps between business and engineering.
+    </p>
   </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm mb-6 z-10 relative">
+    © 2025 Sanjeev Ranjan. All rights reserved.
+  </footer>
+
 </body>
 </html>
