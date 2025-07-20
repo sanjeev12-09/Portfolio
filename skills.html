@@ -4,28 +4,94 @@
   <meta charset="UTF-8" />
   <title>Skills | Sanjeev Ranjan</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    }
+
+    .virus-icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.08;
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <nav class="bg-blue-600 text-white p-4 flex justify-between">
-    <div class="font-bold">Sanjeev Ranjan</div>
-    <div class="space-x-4">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+<body class="text-white font-sans">
+
+  <!-- Virus Background Icons -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[15%]" style="animation-delay: 3s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[35%]" style="animation-delay: 6s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[55%]" style="animation-delay: 9s;" />
+    <img src="https://www.svgrepo.com/show/306500/virus.svg" class="virus-icon left-[75%]" style="animation-delay: 12s;" />
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-600 bg-opacity-80 backdrop-blur-md px-6 py-4 flex justify-between items-center z-10 relative shadow-lg">
+    <div class="text-xl font-bold tracking-wide">Sanjeev Ranjan</div>
+    <div class="space-x-4 text-sm md:text-base">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="skills.html" class="underline font-semibold">Skills</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="experience.html" class="hover:underline">Experience</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto mt-10 px-4">
-    <h1 class="text-3xl font-bold mb-6">Skills</h1>
-    <ul class="list-disc ml-6 text-lg space-y-2">
-      <li>Python, PySpark, JavaScript, SQL</li>
-      <li>Supply Chain Solver Configuration</li>
-      <li>o9 Platform, IBP Language</li>
-      <li>Data Modeling, Integration, Root Cause Analysis</li>
-      <li>Workshop Facilitation, Configuration Testing</li>
-    </ul>
+  <!-- Main Content -->
+  <main class="px-6 py-12 z-10 relative max-w-6xl mx-auto">
+    <h1 class="text-center text-4xl md:text-5xl font-bold glow mb-12">Skills & Expertise</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-200 text-sm md:text-base">
+      <!-- Technical Skills -->
+      <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6 border border-blue-500 shadow-lg">
+        <h2 class="text-xl text-blue-400 font-semibold mb-4">Technical Skills</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Python, PySpark, JavaScript, SQL</li>
+          <li>Integrated Business Planning Language</li>
+          <li>MS Excel (Advanced Functions, Pivot Tables)</li>
+          <li>Data Integration & Data Modeling</li>
+          <li>Flask, SQLite, Redis, Celery</li>
+          <li>Git, GitHub, REST APIs</li>
+        </ul>
+      </div>
+
+      <!-- Functional Expertise -->
+      <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6 border border-blue-500 shadow-lg">
+        <h2 class="text-xl text-blue-400 font-semibold mb-4">Expertise</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Workshop Facilitation & Requirement Analysis</li>
+          <li>Root Cause Analysis & Solution Design</li>
+          <li>o9 Platform Configuration</li>
+          <li>Testing & Deployment of IBP Solutions</li>
+          <li>Forecasting Logic & Inventory Optimization</li>
+          <li>Performance Optimization using Spark SQL</li>
+        </ul>
+      </div>
+    </div>
   </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm mb-6 z-10 relative">
+    © 2025 Sanjeev Ranjan. All rights reserved.
+  </footer>
+
 </body>
 </html>
